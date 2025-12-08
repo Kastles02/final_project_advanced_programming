@@ -21,6 +21,6 @@ def main_event():
         events.append(Event(name,room_num,club_name,event_time,avg_atten,contact_info))
     elif user = 3:
         count = 0
-        for item in event:
+        for item in events:
 
 
