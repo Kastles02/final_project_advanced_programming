@@ -5,11 +5,11 @@ def main_event():
     if user == 1:
         for item in event:
                 print(f"Name: {event.get_name()}")
-                print(f"Room Number: {student.get_room_num()}")
-                print(f"Club Name: {student.get_club_name()}")
-                print(f"Event Time: {student.get_event_time()}")
-                print(f"Average/Estimated Attendance: {student.get_avg_atten()}")
-                print(f"Contact Information: {student.get_contact_info()}")
+                print(f"Room Number: {event.get_room_num()}")
+                print(f"Club Name: {event.get_club_name()}")
+                print(f"Event Time: {event.get_event_time()}")
+                print(f"Average/Estimated Attendance: {event.get_avg_atten()}")
+                print(f"Contact Information: {event.get_contact_info()}")
                 print()
     elif user = 2:
         name = input("Enter the Event Name.")
@@ -19,4 +19,8 @@ def main_event():
         avg_atten = input("Enter the amount of students you expect to attend the Event.")
         contact_info = input("Enter the Contact Information for the president or supervisor of the event.")
         events.append(Event(name,room_num,club_name,event_time,avg_atten,contact_info))
-    
+    elif user = 3:
+        count = 0
+        for item in event:
+
+
