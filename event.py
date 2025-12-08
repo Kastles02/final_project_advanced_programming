@@ -19,14 +19,14 @@ class Event:
     def set_contact_info(self,contact_info):
         self.__contact_info = contact_info
     def get_name(self,name):
-        self.__name = name
+        return self.__name = name
     def get_room_num(self,room_num):
-        self.__room_num = room_num
+        return self.__room_num
     def get_club_name(self,club_name):
-        self.__club_name = club_name
+        return self.__club_name
     def get_event_time(self,event_time):
-        self.__event_time = event_time
+        return self.__event_time
     def get_avg_atten(self,avg_atten):
-        self.__avg_atten = avg_atten
+        return self.__avg_atten
     def get_contact_info(self,contact_info):
-        self.__contact_info = contact_info
+        return self.__contact_info
