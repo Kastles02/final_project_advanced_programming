@@ -11,7 +11,7 @@ def main_event():
                 print(f"Average/Estimated Attendance: {student.get_avg_atten()}")
                 print(f"Contact Information: {student.get_contact_info()}")
                 print()
-    else if user = 2:
+    elif user = 2:
         name = input("Enter the Event Name.")
         room_num = input("Enter the Room Number the event will be in.")
         club_name = input("Enter the Club Name.")
@@ -19,4 +19,4 @@ def main_event():
         avg_atten = input("Enter the amount of students you expect to attend the Event.")
         contact_info = input("Enter the Contact Information for the president or supervisor of the event.")
         events.append(Event(name,room_num,club_name,event_time,avg_atten,contact_info))
-        
+    
