@@ -19,7 +19,7 @@ class Event:
     def set_contact_info(self,contact_info):
         self.__contact_info = contact_info
     def get_name(self,name):
-        return self.__name = name
+        return self.__name
     def get_room_num(self,room_num):
         return self.__room_num
     def get_club_name(self,club_name):
@@ -29,4 +29,5 @@ class Event:
     def get_avg_atten(self,avg_atten):
         return self.__avg_atten
     def get_contact_info(self,contact_info):
+
         return self.__contact_info
