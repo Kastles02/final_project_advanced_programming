@@ -1,26 +1,28 @@
-import room
-def main_room():
-    rooms = []
-    user = input("Welcome to the Room Manager! Choose from the following menu options.\n1.Check Rooms\n2.Add Room\n3.Modify Room\n4.Delete Room")
-    if user == 1:
-        for item in event:
-                print(f"Name: {room.get_name()}")
-                print(f"Room Number: {room.get_room_num()}")
-                print(f"Room Size: {room.get_size()}")
-                print(f"Amount of Computers: {room.get_computers()}")
-                print(f"Amount of people able to fit in the room: {room.get_person_size()}")
-                print(f"Is the room Available?: {room.get_availability()}")
-                print(f"Projector?: {room.get_projector()}")
-                print()
-    elif user = 2:
-        name = input("Enter the building name.")
-        room_num = input("Enter the Room Number.")
-        size = input("Enter the Room Size.")
-        computers = input("Enter the number of Computers.")
-        person_size = input("Enter the amount of students able to fit in the room.")
-        availability = input("Enter if the room is available.")
-        projector = input("Enter if the room has a projector.")
-        events.append(Room(name,size,computers,person_size,availability,projector,room_num))
-    elif user = 3:
-        count = 0
-        for item in rooms:
+from room import Room
+from file_manager import save_room, load_rooms
+from validators import is_positive_number
+
+def manage_rooms():
+    rooms = load_rooms()
+
+    print("1. Add Room")
+    print("2. View Rooms")
+    choice = input("Choice: ")
+
+    if choice == "1":
+        room_num = input("Room number: ")
+        name = input("Room name: ")
+        capacity = input("Capacity: ")
+        building = input("Building: ")
+
+        if not is_positive_number(capacity):
+            print("Invalid capacity")
+            return
+
+        room = Room(room_num, name, int(capacity), building)
+        save_room(room)
+        print("Room added.")
+
+    elif choice == "2":
+        for r in rooms:
+            print(r.get_room_num(), r.get_name(), r.get_status())
